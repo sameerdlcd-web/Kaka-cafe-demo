@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#17251d">
+<title>Kaka Cafe | Padharo Sa – Rajasthani Flavours in Bengaluru</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="intro-screen" class="intro-screen" aria-label="Kaka Cafe video introduction">
+  <video id="intro-video" class="intro-background-video" playsinline preload="auto" poster="assets/kaka-cafe-intro-poster.jpg">
+    <source src="assets/kaka-cafe-intro.mp4" type="video/mp4">
+  </video>
+  <div class="intro-vignette"></div>
+  <div class="intro-brand">
+    <div class="intro-emblem">K</div>
+    <div class="intro-overline">A LITTLE RAJASTHAN IN BENGALURU</div>
+    <h1>Kaka <em>Cafe</em></h1>
+    <p class="intro-padharo">Padharo sa. Khamma Ghani.</p>
+    <button id="intro-start" class="intro-start">▶ &nbsp; ENTER WITH SOUND</button>
+    <p class="intro-hint">A 10-second glimpse into our world</p>
+  </div>
+  <button id="intro-skip" class="intro-skip">Skip intro ↗</button>
+  <div class="intro-progress"><span id="intro-progress-bar"></span></div>
+</div>
+
+<div id="site-content" class="site-content">
+
+<div class="topbar">Padharo sa • A taste of Rajasthan • Harohalli, Yelahanka</div>
+<nav class="nav">
+  <a class="brand" href="#home"><div class="brand-mark">K</div><div><div class="brand-name">Kaka Cafe</div><div class="brand-sub">RANGILO RAJASTHAN · GOOD FOOD</div></div></a>
+  <div class="navlinks"><a href="#cafe-intro">Cafe film</a><a href="#story">Our story</a><a href="#menu">Menu</a><a href="#experience">The experience</a><a href="#visit">Find us</a><a href="https://www.instagram.com/kakacafe.blr/" target="_blank" rel="noopener">Instagram ↗</a></div>
+  <div class="nav-actions"><button class="cart-button" onclick="openCart()">Bag <span id="cart-count">(0)</span></button><a class="pill dark" href="#menu">Explore menu ↗</a></div>
+</nav>
+<main id="home">
+<section class="hero">
+ <div class="hero-copy"><div class="eyebrow">A ROYAL RAJASTHANI WELCOME</div><h1>Padharo sa.<br><em>Rajasthan awaits.</em></h1><p>Bring your appetite for the bold, soulful flavours of Rajasthan — from crisp kachoris to comforting thalis, served with the warmth of a traditional haveli.</p><div class="hero-ctas"><a class="pill dark" style="background:var(--orange);border-color:var(--orange)" href="#menu">Discover the menu ↗</a><a class="pill light" href="#visit">Plan your visit</a></div><div class="hero-note">RAJASTHANI FLAVOURS · WARM HOSPITALITY · MADE TO SHARE</div></div>
+ <div class="hero-photo">
+  <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1500&q=85" alt="A colourful Indian vegetarian food spread">
+  <div class="photo-tag"><strong>Padharo sa!</strong><span>A little Rajasthan in Bengaluru.</span></div>
+</div>
+</section>
+
+<section class="intro" id="story">
+ <div class="intro-art"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1000&q=85" alt="Freshly prepared Indian parathas"><div class="stamp">A warm<br>welcome<br>awaits</div></div>
+ <div><div class="section-kicker">ROOTED IN RAJASTHANI HOSPITALITY</div><h2>A little haveli.<br>A lot of heart.</h2><p>Inspired by the colours, culture and generous hospitality of Rajasthan, Kaka Cafe brings people together over hearty vegetarian food. Think earthy flavours, vibrant spices and the feeling of being welcomed into a traditional home.</p><p>Drop in for a Rajasthani thali, share a plate of pyaaz kachori, or linger over a glass of chilled masala chaas.</p><a class="text-link" href="#visit">Step inside ↗</a></div>
+</section>
+<section class="features">
+ <div class="feature"><div class="feature-icon">🌿</div><div><strong>Shuddh Shakahari</strong><span>Vegetarian favourites</span></div></div>
+ <div class="feature"><div class="feature-icon">🫓</div><div><strong>Rajasthani classics</strong><span>Recipes full of character</span></div></div>
+ <div class="feature"><div class="feature-icon">☀️</div><div><strong>Mehmaan-nawazi</strong><span>A warm Rajasthani welcome</span></div></div>
+</section>
+<section class="menu-section" id="menu">
+ <div class="section-head"><div class="section-kicker">FROM THE RAJASTHANI KITCHEN</div><h2>A royal feast of flavours.</h2><p>A showcase of Rajasthani-inspired favourites. These dishes and prices are illustrative placeholders until the cafe confirms its actual menu.</p></div>
+ <div class="filters"><button class="filter active" data-filter="all">All favourites</button><button class="filter" data-filter="paratha">Rajasthani meals</button><button class="filter" data-filter="mains">Snacks</button><button class="filter" data-filter="snacks">Sweets & drinks</button></div>
+ <div class="menu-grid" id="menu-grid">
+  <article class="dish" data-category="paratha"><div class="dish-image"><img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=900&q=80" alt="Traditional Indian stuffed bread"><span class="veg-dot"></span></div><div class="dish-body"><div class="dish-title"><h3>Dal Baati Churma</h3><span class="price">₹199</span></div><p>Rajasthan's iconic trio of baked baati, dal and sweet churma.</p><button class="add" onclick="addItem('Dal Baati Churma',199)">ADD TO BAG +</button></div></article>
+  <article class="dish" data-category="paratha"><div class="dish-image"><img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=80" alt="Indian curry served in a bowl"><span class="veg-dot"></span></div><div class="dish-body"><div class="dish-title"><h3>Gatte ki Sabzi</h3><span class="price">₹169</span></div><p>Besan dumplings simmered in a spiced, tangy Rajasthani gravy.</p><button class="add" onclick="addItem('Gatte ki Sabzi',169)">ADD TO BAG +</button></div></article>
+  <article class="dish" data-category="paratha"><div class="dish-image"><img src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&w=900&q=80" alt="Indian vegetarian thali"><span class="veg-dot"></span></div><div class="dish-body"><div class="dish-title"><h3>Rajasthani Thali</h3><span class="price">₹249</span></div><p>A generous demo thali inspired by the flavours of the desert state.</p><button class="add" onclick="addItem('Rajasthani Thali',249)">ADD TO BAG +</button></div></article>
+  <article class="dish" data-category="mains"><div class="dish-image"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80" alt="Indian savoury snack"><span class="veg-dot"></span></div><div class="dish-body"><div class="dish-title"><h3>Pyaaz Kachori</h3><span class="price">₹79</span></div><p>Flaky, crisp pastry with a warmly spiced onion filling.</p><button class="add" onclick="addItem('Pyaaz Kachori',79)">ADD TO BAG +</button></div></article>
+  <article class="dish" data-category="mains"><div class="dish-image"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=80" alt="Traditional Indian vegetable dish"><span class="veg-dot"></span></div><div class="dish-body"><div class="dish-title"><h3>Ker Sangri</h3><span class="price">₹179</span></div><p>A classic desert-region preparation of native berries and beans.</p><button class="add" onclick="addItem('Ker Sangri',179)">ADD TO BAG +</button></div></article>
+  <article class="dish" data-category="snacks"><div class="dish-image"><img src="https://images.unsplash.com/photo-1605197161470-5d2f0f1f4c7b?auto=format&fit=crop&w=900&q=80" alt="Indian sweet dessert"><span class="veg-dot"></span></div><div class="dish-body"><div class="dish-title"><h3>Ghewar & Chaas</h3><span class="price">₹119</span></div><p>A sweet-and-cool finish inspired by Rajasthan's festive flavours.</p><button class="add" onclick="addItem('Ghewar & Chaas',119)">ADD TO BAG +</button></div></article>
+ </div>
+ <p class="menu-foot">Demo only: item availability, descriptions and prices are illustrative. Final menu will be supplied and approved by Kaka Cafe.</p>
+</section>
+<section class="ambience" id="experience">
+ <div class="ambience-photo"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85" alt="Warm outdoor cafe dining atmosphere"></div>
+ <div class="ambience-copy"><div class="section-kicker">Make a little time for yourself</div><h2>Colourful stories<br>are shared around<br>a Rajasthani table.</h2><p>From the first crunchy bite to the last sip of chaas, enjoy a relaxed dining experience inspired by Rajasthan's colourful food culture and warm mehmaan-nawazi.</p><a class="pill" href="#visit">Find your way here ↗</a></div>
+</section>
+<section class="quote"><blockquote>“The best memories are made when everyone gathers around the table.”</blockquote><span>KHAMMA GHANI · WELCOME</span></section>
+<section class="visit" id="visit">
+ <div><div class="section-kicker">Your table is waiting</div><h2>Your Rajasthani<br>table is waiting.</h2><p>Visit us for traditional Rajasthani-inspired vegetarian flavours in the Harohalli–Yelahanka area of Bengaluru.</p>
+  <div class="visit-details">
+   <div class="detail"><span>📍</span><div><b>Visit us</b>Beside Shoba Apartments, Govindapura, Harohalli, Yelahanka, Bengaluru – 560119</div></div>
+   <div class="detail"><span>🕙</span><div><b>Opening hours</b>10:00 AM – 11:00 PM (confirm current timings before launch)</div></div>
+   <div class="detail"><span>☎️</span><div><b>Call us</b>+91 70224 70962</div></div>
+  </div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:25px"><a class="pill dark" href="https://www.google.com/maps/search/?api=1&query=Kaka+Cafe+Harohalli+Yelahanka+Bengaluru" target="_blank" rel="noopener">Get directions ↗</a><a class="pill" href="https://www.instagram.com/kakacafe.blr/" target="_blank" rel="noopener">Instagram ↗</a></div>
+ </div>
+ <div class="map-card"><div><div class="map-pin">📍</div><strong>Kaka Cafe</strong><span>Harohalli · Yelahanka · Bengaluru</span><br><a href="https://www.google.com/maps/search/?api=1&query=Kaka+Cafe+Harohalli+Yelahanka+Bengaluru" target="_blank" rel="noopener">OPEN IN GOOGLE MAPS ↗</a></div></div>
+</section>
+</main>
+
+<section class="instagram-promo" aria-label="Follow Kaka Cafe on Instagram">
+  <div class="insta-avatar">
+    <span class="insta-moustache">⌁</span>
+    <small>KAKA</small>
+  </div>
+  <div class="insta-copy">
+    <div class="insta-title-line">
+      <a class="insta-handle" href="https://www.instagram.com/kakacafe.blr/" target="_blank" rel="noopener">@kakacafe.blr</a>
+      <span class="insta-location">Yelahanka, BLR</span>
+    </div>
+    <p>Rajasthani Flavours • Dal Baati Churma • Street Chaat • Kulhad Chai • Follow<br class="insta-break"> our daily specials on Instagram</p>
+  </div>
+  <a class="insta-follow" href="https://www.instagram.com/kakacafe.blr/" target="_blank" rel="noopener">
+    <span class="insta-camera">◎</span> Follow @kakacafe.blr
+  </a>
+</section>
+
+<footer class="footer">
+ <div class="footer-top"><div><a class="brand" href="#home"><div class="brand-mark">K</div><div><div class="brand-name">Kaka Cafe</div><div class="brand-sub" style="color:#aeb7aa">RANGILO RAJASTHAN · GOOD FOOD</div></div></a><p>A little taste of Rajasthan, served with warmth in Bengaluru. Padharo sa!</p></div><div class="footer-links"><a href="#cafe-intro">Cafe film</a><a href="#story">Our story</a><a href="#menu">Menu</a><a href="#experience">Experience</a><a href="#visit">Visit us</a><a href="https://www.instagram.com/kakacafe.blr/" target="_blank" rel="noopener">Instagram ↗</a></div></div>
+ <div class="copyright"><span>© 2026 Kaka Cafe. Demo website concept.</span><span>Designed with a little Rajasthani rang.</span></div>
+</footer>
+<div class="cart-drawer" id="cart"><div class="shade" onclick="closeCart()"></div><aside class="cart-panel"><div class="cart-head"><h3>Your bag</h3><button class="close" onclick="closeCart()">×</button></div><div class="cart-items" id="cart-items"><div class="empty">Your bag is waiting for something delicious.</div></div><div class="cart-total"><div class="total-line"><span>Subtotal</span><span id="cart-total">₹0</span></div><button class="checkout" onclick="demoCheckout()">CONTINUE (DEMO)</button><p style="font-size:10px;color:#8b8b81;line-height:1.5">Demo checkout only. Online payment and order routing can be connected in the final website.</p></div></aside></div>
+<div class="toast" id="toast">Added to your bag</div>
+
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
